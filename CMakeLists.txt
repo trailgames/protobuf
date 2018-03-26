@@ -47,9 +47,7 @@ target_include_directories(protobuf-lite PUBLIC src)
 target_compile_options(protobuf-lite PRIVATE -DHAVE_PTHREAD)
 set_property(TARGET protobuf-lite PROPERTY POSITION_INDEPENDENT_CODE ON)
 
-option(BUILD_PROTOC OFF)
-
-if (BUILD_PROTOC)
+if (NOT EMSCRIPTEN)
     add_library(protobuf
         src/google/protobuf/any.pb.cc                                    
         src/google/protobuf/api.pb.cc                                    
