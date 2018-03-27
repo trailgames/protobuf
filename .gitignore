@@ -189,3 +189,4 @@ cmake/cmake-build-debug/
 
 # Trail
 build
+build_clang

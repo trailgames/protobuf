@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.0)
 
 project(protobuf)
 
+set(CMAKE_CXX_STANDARD 14)
+
 add_library(protobuf-lite
     src/google/protobuf/stubs/bytestream.cc                          
     src/google/protobuf/stubs/bytestream.h                           
