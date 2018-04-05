@@ -808,8 +808,8 @@ void InitSCCImpl(SCCInfoBase* scc) {
   if (runner.load(std::memory_order_relaxed) == me) {
     // Because we're in the process of constructing the default instance.
     // We can be assured that we're already exploring this SCC.
-    GOOGLE_CHECK_EQ(scc->visit_status.load(std::memory_order_relaxed),
-             SCCInfoBase::kRunning);
+    //GOOGLE_CHECK_EQ(scc->visit_status.load(std::memory_order_relaxed),
+    //         SCCInfoBase::kRunning);
     return;
   }
   InitProtobufDefaults();
